@@ -25,7 +25,7 @@ def get_flag(iso_code: str):
 def safe(value, default="Unknown"):
     return value if value is not None else default
 
-@app.post("/ip-info/")
+@app.post("/ip-info")
 def get_ip_info(data: IPRequest):
     try:
         city_resp = city_reader.city(data.ip)
