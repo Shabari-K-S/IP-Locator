@@ -6,7 +6,6 @@ app = FastAPI()
 
 # Load GeoIP databases
 city_reader = geoip2.database.Reader("GeoLite2-City.mmdb")
-country_reader = geoip2.database.Reader("GeoLite2-Country.mmdb")
 asn_reader = geoip2.database.Reader("GeoLite2-ASN.mmdb")
 
 class IPRequest(BaseModel):
