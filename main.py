@@ -29,7 +29,6 @@ def safe(value, default="Unknown"):
 def get_ip_info(data: IPRequest):
     try:
         city_resp = city_reader.city(data.ip)
-        country_resp = country_reader.country(data.ip)
         asn_resp = asn_reader.asn(data.ip)
 
         country_iso = safe(city_resp.country.iso_code, None)
